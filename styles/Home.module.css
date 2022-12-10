@@ -12,15 +12,6 @@
   align-items: center;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
-
 .footer a {
   display: flex;
   justify-content: center;
@@ -28,8 +19,8 @@
   flex-grow: 1;
 }
 
-.title a {
-  color: #0070f3;
+.title span {
+  color: #f04f64;
   text-decoration: none;
 }
 
@@ -88,8 +79,8 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #ab99f4;
+  border-color: #ab99f4;
 }
 
 .card h2 {

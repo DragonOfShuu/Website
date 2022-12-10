@@ -21,6 +21,10 @@ a {
   }
   body {
     color: white;
-    background: black;
+    background: #15080e;
   }
+}
+
+p.light-text {
+  color: gray;
 }
