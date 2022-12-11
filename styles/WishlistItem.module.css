@@ -1,0 +1,13 @@
+.card {
+    display: grid;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #210c16;
+
+    border-color: #D91E36;
+    border-width: 1px;
+    border-style: solid;
+
+    min-height: 250px;
+    min-width: 400px;
+}

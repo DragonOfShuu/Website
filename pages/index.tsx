@@ -3,12 +3,12 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
   return (
     <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
+      <main className="main">
+        <h1 className="title">
           Welcome to my <span>WEBSITE!</span>
         </h1>
 
-        <p className={styles.description}>
+        <p className="description">
           Get started by editing{' '}
           <code className={styles.code}>pages/index.tsx</code>
         </p>
