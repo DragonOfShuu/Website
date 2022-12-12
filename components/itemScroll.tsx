@@ -9,9 +9,13 @@ export default function ItemScroll({ header, children }: Props) {
     return (
         <>
             <h1 className={styles.header}>{header}</h1>
-            <div className={styles.scrollable}>
-                {children}
+            <div className={styles.container}>
+                <div className={styles.scrollable}>
+                    {children}
+                </div>
+                <div className={styles.renderOver}></div>
             </div>
+            
         </>
     );
 }
