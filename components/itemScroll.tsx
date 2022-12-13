@@ -1,7 +1,7 @@
 import styles from "../styles/ItemScroll.module.css"
 
 type Props = {
-    children: JSX.Element[],
+    children: JSX.Element[] | JSX.Element,
     header: string
 }
 

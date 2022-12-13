@@ -8,6 +8,7 @@ export default function Wishlist() {
         id: 0,
         name: "Burglar Bag",
         description: "A bag used for bagging bodies",
+        image: "/BodyBag.jpg",
         link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
     }
 
@@ -32,6 +33,23 @@ export default function Wishlist() {
                 <WishlistItem wishlist={wishListItem1}></WishlistItem>
                 <WishlistItem wishlist={wishListItem1}></WishlistItem>
                 <WishlistItem wishlist={wishListItem1}></WishlistItem>
+            </ItemScroll>
+
+            <ItemScroll header="Items between $20-$50">
+                <WishlistItem wishlist={wishListItem1}/>
+                <WishlistItem wishlist={wishListItem1}/>
+                <WishlistItem wishlist={wishListItem1}/>
+                <WishlistItem wishlist={wishListItem1}/>
+                <WishlistItem wishlist={wishListItem1}/>
+                <WishlistItem wishlist={wishListItem1}/>
+                <WishlistItem wishlist={wishListItem1}/>
+                <WishlistItem wishlist={wishListItem1}/>
+                <WishlistItem wishlist={wishListItem1}/>
+                <WishlistItem wishlist={wishListItem1}/>
+            </ItemScroll>
+
+            <ItemScroll header="Items over $50">
+                <WishlistItem wishlist={wishListItem1}/>
             </ItemScroll>
         </main>
     );

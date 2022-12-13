@@ -1,7 +1,10 @@
 .card {
     display: grid;
+    /* grid-template-columns: 60% 40%; */
+    grid-template-rows: 60% 40%; 
+
     border-radius: 10px;
-    padding: 10px;
+    padding: 0;
     background-color: #210c16;
 
     border-color: #D91E36;
@@ -12,4 +15,43 @@
 
     min-height: 250px;
     min-width: 400px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+.containerImage {
+    display: flex;
+
+    background-color: black;
+    overflow: hidden;
+
+    align-items: center;
+    align-content: stretch;
+
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    grid-row: 1;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}
+
+.descriptionBox {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    grid-row: 2;
+}
+
+.header {
+    margin: 0;
+}
+
+.description {
+    text-align: left;
+    align-self: flex-start;
 }
