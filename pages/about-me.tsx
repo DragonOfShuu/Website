@@ -1,5 +1,5 @@
 export default function AboutMe() {
   return (
-    <p>Yep, here's another web page.</p>
+    <p>Yep, here&apos;s another web page.</p>
   )
 }
