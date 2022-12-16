@@ -1,0 +1,46 @@
+.translations {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    min-height: 60vh;
+
+    margin: 10vh 20vw;
+}
+
+.output, .input {
+    min-width: 60vw;
+    min-height: 20vh;
+
+    padding: 5px;
+}
+
+.input:hover, .output:hover {
+    border-color: #ab99f4;
+}
+
+.executionButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+    min-width: 20vw;
+}
+
+@media ( max-width: 600px ) {
+    .translations {
+        min-height: 50vh;
+        min-width: 60vw;
+    }
+
+    .executionButtons {
+        justify-content: space-evenly;
+        min-width: 75vw;
+    }
+
+    .input, .output {
+        min-width: 75vw;
+    }
+}

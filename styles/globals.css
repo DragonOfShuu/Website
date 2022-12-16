@@ -6,6 +6,14 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+html {
+  color-scheme: dark;
+}
+body {
+  color: white;
+  background: #15080e;
+}
+
 body::-webkit-scrollbar {
   position: fixed;
   width: 10px;
@@ -27,6 +35,34 @@ body::-webkit-scrollbar-track {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+textarea {
+  padding: 4px;
+
+  border-radius: 8px;
+  border-color: #f04f64;
+  
+  background-color: #45192f;
+}
+
+button {
+  display: block;
+  background-color: #5d203f;
+
+  border-color: #f04f64;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 8px;
+
+  min-width: 100px;
+  min-height: 30px;
+
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ab99f485;
 }
 
 .main {
@@ -63,16 +99,6 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: #15080e;
-  }
 }
 
 p.light-text {
