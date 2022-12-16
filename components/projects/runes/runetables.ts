@@ -25,7 +25,7 @@ const runes: string[] = [
 ]
 
 const chars: string[][] = [
-    ["a"],      //     "ᚨ",
+    ["a"],  
     ["b"],
     ["c"],
     ["d"],
