@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import styles from '../../../styles/projects/Runes.module.css';
-import { convertToRune } from '../../../components/projects/runes/runetables';
+import { convertToRune, convertFromRune } from '../../../components/projects/runes/runetables';
 import copyText from '../../../components/utils/copyToClipboard';
 
 export default function Runes() {
@@ -23,35 +23,19 @@ export default function Runes() {
     }
     const convertToRuneUI = useCallback(
       () => {
-        let converted: string = convertToRune(Input);
+        let converted: string = convertToRune( Input );
 
         setOutput( converted );
-        copyText(converted)
+        copyText( converted )
       },
       [Input, setOutput],
     )
-    
-    // function convertToRuneUI() {
-    //     console.log("conversion")
-    //     let converted: string = convertToRune(Input);
-
-    //     setOutput( converted );
-    //     copyText(converted).then(() =>
-    //         console.log("Successful copy!")
-    //     ).catch((err) =>
-    //         console.log(`There was error. \n${err}`)
-    //     );
-    // }
-
-    // function convertFromRuneUI() {
-    //     let convertable = Input;
-    //     // copyText(Output);
-    // }
 
     const convertFromRuneUI = useCallback(
       () => {
-        let convertable = Input;
-        setOutput(convertable);
+        let converted = convertFromRune( Input );
+        setOutput( converted );
+        copyText( converted )
       },
       [Input, setOutput],
     )
@@ -102,7 +86,6 @@ export default function Runes() {
                     onChange={(event) => setOutput(event.target.value)}
                     value={Output}
                     readOnly />
-                <p>Decryption not included currently</p>
             </div>
         </main>
     );

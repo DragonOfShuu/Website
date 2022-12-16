@@ -58,7 +58,7 @@ const chars2: string[][] = [
     ["th"]
 ]
 
-const replace2In2D = (item: string, twoDim: string[][], returnChars: string[]): string | null => {
+const replaceIn2D = (item: string, twoDim: string[][], returnChars: string[]): string | null => {
     for (let i = 0; i < twoDim.length; i++ ) {
         for (let f = 0; f < twoDim[i].length; f++) {
             let element2: string = twoDim[i][f];
@@ -72,7 +72,7 @@ const replace2In2D = (item: string, twoDim: string[][], returnChars: string[]): 
     return null;
 }
 
-const convertToRune = (text: String): string => {
+const convertToRune = (text: string): string => {
     text = text.toLowerCase();
     let newText: string = "";
 
@@ -81,7 +81,7 @@ const convertToRune = (text: String): string => {
         let newCharacter: string | null;
 
         // Try to find and replace 2 characters to one    
-        newCharacter = replace2In2D((item + text[i+1]), chars2, runes2);
+        newCharacter = replaceIn2D((item + text[i+1]), chars2, runes2);
         if (newCharacter != undefined) {
             newText += newCharacter;
             i++;
@@ -89,7 +89,7 @@ const convertToRune = (text: String): string => {
         }
         
         // Find and replace 1 character to 1
-        newCharacter = replace2In2D(item, chars, runes);
+        newCharacter = replaceIn2D(item, chars, runes);
         // console.log(newCharacter)
         if (newCharacter != undefined) {
             newText += newCharacter;
@@ -104,4 +104,37 @@ const convertToRune = (text: String): string => {
     return newText;
 }
 
-export { convertToRune };
+const replaceIn1D = (element: string, from: string[], to: string[][]): string | undefined => {
+    let index = from.indexOf(element)
+    // console.log(index);
+    if (index==-1) return undefined;
+
+    let appendable = to[index];
+    if (appendable.length == 1) return appendable[0];
+    else {
+        return `[${appendable.join("/")}]`;
+    }
+}
+
+const convertFromRune = (text: string): string => {
+    let newText: string = "";
+    for (let i = 0; i < text.length; i++) {
+        let element = text[i];
+
+        let newElement: string | undefined;
+
+        // Check if the element can be found in the 2 char
+        newElement = replaceIn1D(element, runes2, chars2);
+        if (newElement != undefined) { newText+=newElement; continue; }
+
+        // check if the element can be found in the 1 char
+        newElement = replaceIn1D(element, runes, chars);
+        if (newElement != undefined) { newText+=newElement; continue; }
+
+        // If neither, leave it untranslated
+        newText += element;
+    }
+    return newText;
+}
+
+export { convertToRune, convertFromRune };
