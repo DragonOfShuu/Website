@@ -1,50 +1,68 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import styles from '../../../styles/projects/Runes.module.css';
 import { convertToRune } from './runetables';
 import copyText from '../../../components/utils/copyToClipboard';
 
-export default function runes() {
-    const [toRune, setToRune] = useState(true);
-
-    const [input, setInput] = useState("");
-    const [output, setOutput] = useState("");
+export default function Runes() {
+    const [ToRune, SetToRune] = useState(true);
+    
+    const [Input, SetInput] = useState("");
+    const [Output, setOutput] = useState("");
 
     function switchText() {
-        let outputText: string = output;
-        let inputText: string = input;
+        let outputText: string = Output;
+        let inputText: string = Input;
 
-        setInput(outputText);
+        SetInput(outputText);
         setOutput(inputText);
     }
 
     function clearText() {
-        setInput("");
+        SetInput("");
         setOutput("");
     }
-
-    function convertToRuneUI() {
-        console.log("conversion")
-        let converted: string = convertToRune(input);
+    const convertToRuneUI = useCallback(
+      () => {
+        let converted: string = convertToRune(Input);
 
         setOutput( converted );
-        copyText(converted).then(() =>
-            console.log("Successful copy!")
-        ).catch((err) =>
-            console.log(`There was error. \n${err}`)
-        );
-    }
+        copyText(converted)
+      },
+      [Input, setOutput],
+    )
+    
+    // function convertToRuneUI() {
+    //     console.log("conversion")
+    //     let converted: string = convertToRune(Input);
 
-    function convertFromRuneUI() {
-        let convertable = input;
-        // copyText(output);
-    }
+    //     setOutput( converted );
+    //     copyText(converted).then(() =>
+    //         console.log("Successful copy!")
+    //     ).catch((err) =>
+    //         console.log(`There was error. \n${err}`)
+    //     );
+    // }
+
+    // function convertFromRuneUI() {
+    //     let convertable = Input;
+    //     // copyText(Output);
+    // }
+
+    const convertFromRuneUI = useCallback(
+      () => {
+        let convertable = Input;
+        setOutput(convertable);
+      },
+      [Input, setOutput],
+    )
+    
 
     useEffect(() => {
         function keyDownHandler(event: KeyboardEvent) {
             if (event.key === 'Enter') {
                 event.preventDefault();
 
-                (toRune ? convertToRuneUI : convertFromRuneUI)();
+                (ToRune ? convertToRuneUI : convertFromRuneUI)();
             }
         };
     
@@ -54,26 +72,26 @@ export default function runes() {
         return () => {
             document.removeEventListener('keydown', keyDownHandler);
         };
-    }, [input, output]);
+    }, [Input, Output, ToRune, convertFromRuneUI, convertToRuneUI]);
 
     return (
         <main className="main">
             <h1 className="title">Runes <span >Translation</span></h1>
 
             <div className={styles.translations}>
-                <button onClick={() => setToRune(!toRune)}>
+                <button onClick={() => SetToRune(!ToRune)}>
                     {
-                        toRune ? "Rune Mode" : "Decrypt Mode"
+                        ToRune ? "Rune Mode" : "Decrypt Mode"
                     }
                 </button>
                 <textarea 
                     className={styles.input} 
                     placeholder='Input...'
-                    onChange={(event) => setInput(event.target.value)}
-                    value={input} />
+                    onChange={(event) => SetInput(event.target.value)}
+                    value={Input} />
 
                 <div className={styles.executionButtons}>
-                    <button onClick={toRune ? convertToRuneUI : convertFromRuneUI}>Execute</button>
+                    <button onClick={ToRune ? convertToRuneUI : convertFromRuneUI}>Execute</button>
                     <button onClick={switchText}>Switch</button>
                     <button onClick={clearText}>Clear</button>
                 </div>
@@ -82,7 +100,7 @@ export default function runes() {
                     className={styles.output} 
                     placeholder='Output...' 
                     onChange={(event) => setOutput(event.target.value)}
-                    value={output}
+                    value={Output}
                     readOnly />
                 <p>Decryption not included currently</p>
             </div>
