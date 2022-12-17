@@ -1,7 +1,8 @@
+import { useEffect, useState } from "react";
 import ItemScroll from "../components/itemScroll";
 import WishlistItem from "../components/wishlistItem";
 import styles from '../styles/Wishlist.module.css';
-import { IWishlistItem } from "../types";
+import { IWishListCollection, IWishlistItem } from "../types";
 
 export default function Wishlist() {
     const wishListItem1: IWishlistItem = {
@@ -12,45 +13,51 @@ export default function Wishlist() {
         link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
     }
 
+    const wishlistCollection: IWishListCollection = {
+        "Don't actually buy this.": [
+            wishListItem1
+        ]
+    }
+
+    const [content, setContent] = useState<IWishListCollection>(wishlistCollection);
+    const [isLoading, setIsLoading] = useState<boolean>(true);
+
+    useEffect(() => {
+        setIsLoading(true);
+        fetch('/api/wishlist')
+            .then((res) => res.json())
+            .then((data) => {
+                let newContent: IWishListCollection = data;
+                console.log(newContent);
+                console.log(Object.keys(newContent));
+                setContent(newContent);
+                setIsLoading(false);
+            })
+    }, [setContent, setIsLoading])
+
     return (
         <main className="main">
             <h1 className="title">
                 My <span>WISHLIST</span>
             </h1>
 
-            <ItemScroll header="Items Under $20">
-                <WishlistItem wishlist={wishListItem1}></WishlistItem>
-                <WishlistItem wishlist={wishListItem1}></WishlistItem>
-                <WishlistItem wishlist={wishListItem1}></WishlistItem>
-                <WishlistItem wishlist={wishListItem1}></WishlistItem>
-                <WishlistItem wishlist={wishListItem1}></WishlistItem>
-                <WishlistItem wishlist={wishListItem1}></WishlistItem>
-                <WishlistItem wishlist={wishListItem1}></WishlistItem>
-                <WishlistItem wishlist={wishListItem1}></WishlistItem>
-                <WishlistItem wishlist={wishListItem1}></WishlistItem>
-                <WishlistItem wishlist={wishListItem1}></WishlistItem>
-                <WishlistItem wishlist={wishListItem1}></WishlistItem>
-                <WishlistItem wishlist={wishListItem1}></WishlistItem>
-                <WishlistItem wishlist={wishListItem1}></WishlistItem>
-                <WishlistItem wishlist={wishListItem1}></WishlistItem>
-            </ItemScroll>
-
-            <ItemScroll header="Items between $20-$50">
-                <WishlistItem wishlist={wishListItem1}/>
-                <WishlistItem wishlist={wishListItem1}/>
-                <WishlistItem wishlist={wishListItem1}/>
-                <WishlistItem wishlist={wishListItem1}/>
-                <WishlistItem wishlist={wishListItem1}/>
-                <WishlistItem wishlist={wishListItem1}/>
-                <WishlistItem wishlist={wishListItem1}/>
-                <WishlistItem wishlist={wishListItem1}/>
-                <WishlistItem wishlist={wishListItem1}/>
-                <WishlistItem wishlist={wishListItem1}/>
-            </ItemScroll>
-
-            <ItemScroll header="Items over $50">
-                <WishlistItem wishlist={wishListItem1}/>
-            </ItemScroll>
+            {
+                isLoading ? 
+                    <p>Loading...</p>
+                    :
+                    Object.keys(content).map((key, index) => {
+                        return (
+                            <ItemScroll header={key} key={index}>
+                                {
+                                    content[key].map((item) => {
+                                        return <WishlistItem wishlist={item} key={item.id}></WishlistItem>;
+                                        }
+                                    )
+                                }
+                            </ItemScroll>
+                        );
+                    })
+            }  
         </main>
     );
 }

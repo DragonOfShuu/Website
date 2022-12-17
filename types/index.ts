@@ -6,3 +6,7 @@ export interface IWishlistItem {
     alt?: string,
     link: string
 }
+
+export interface IWishListCollection {
+    [Group: string]: IWishlistItem[]
+}
