@@ -7,8 +7,10 @@ export default function Home() {
         <h1 className="title">
           Welcome to my <span>WEBSITE!</span>
         </h1>
+        
+        <p>Not programmed yet :/</p>
 
-        <p className="description">
+        {/* <p className="description">
           Get started by editing{' '}
           <code className={styles.code}>pages/index.tsx</code>
         </p>
@@ -43,7 +45,7 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
-        </div>
+        </div> */}
       </main>
     </div>
   )

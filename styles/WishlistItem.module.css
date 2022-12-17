@@ -18,8 +18,6 @@
     max-width: 400px;
 
     overflow: hidden;
-
-    cursor: pointer;
 }
 
 .containerImage {
@@ -31,9 +29,9 @@
     align-items: center;
     align-content: stretch;
 
-    /* grid-column-start: 1;
-    grid-column-end: 3; */
     grid-row: 1;
+
+    cursor: pointer;
 }
 
 .image {
@@ -55,4 +53,33 @@
 .description {
     text-align: left;
     align-self: flex-start;
+}
+
+.descScroll {
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.descScroll::-webkit-scrollbar {
+    position: static;
+    width: 10px;
+
+}
+
+/* .scrollable:hover::-webkit-scrollbar {
+
+} */
+
+.descScroll::-webkit-scrollbar-thumb {
+    background-color: #00000000;
+    border-radius: 5px;
+}
+
+.descScroll:hover::-webkit-scrollbar-thumb {
+    background-color: #8c1a2999;
+}
+
+.descScroll::-webkit-scrollbar-thumb:hover {
+    background-color: #D91E36dd;
 }

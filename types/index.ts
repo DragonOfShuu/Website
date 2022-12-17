@@ -4,6 +4,7 @@ export interface IWishlistItem {
     description: string,
     image: string,
     alt?: string,
+    tags?: string[],
     link: string
 }
 

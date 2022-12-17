@@ -1,5 +1,11 @@
 export default function AboutMe() {
   return (
-    <p>Yep, here&apos;s another web page.</p>
+    <main className="main">
+      <h1 className="title">
+        About <span>ME</span>
+      </h1>
+
+      <p>Not programmed yet :/</p>
+    </main>
   )
 }
