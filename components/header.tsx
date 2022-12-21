@@ -6,8 +6,8 @@ export default function Header() {
     return (
         <div>
             <Head>
-                <title>Logan Cederlof</title>
-                <meta name="description" content="A website on Logan Cederlof" />
+                <title>Dragon of Shuu</title>
+                <meta name="description" content="A website on my projects, my background, and ideas." />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <nav className={styles.nav}>
