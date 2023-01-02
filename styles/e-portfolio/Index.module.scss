@@ -1,0 +1,53 @@
+@use '../colors';
+
+.portfolioCardHolder {
+    display: flex;
+
+    height: auto;
+    width: 30vw;
+    
+    margin: 0;
+
+    /* background-color: #0f060a; */
+}
+
+.spacerDiv {
+    margin: 400px;
+}
+
+.articleItem {
+    background-color: #210c16;
+
+    border: 1px colors.$accent-color solid;
+    border-radius: 20px;
+
+    width: 100%;
+
+    &:has(.articleImage) {
+        display: grid;
+        // grid-template-rows: ;
+
+        // .articleImage {
+
+        // }
+
+        // .title {
+
+        // }
+        
+        // .description {
+        
+        // }
+    }
+
+    &:not(:has(.articleImage)) {
+        display: flex;
+        flex-direction: column;
+    
+        padding: 10px;
+
+        .topBar {
+            background-color: colors.$accent-color;
+        }
+    }
+}

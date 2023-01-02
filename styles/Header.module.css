@@ -1,20 +1,25 @@
-.nav {
+.headerNav {
     position: fixed;
-    padding: 5px 10px;
-    min-width: 300px;
-    left: 50%;
-    margin-left: -150px;
-    /* right: 30vw; */
+    width: 100%;
+    height: auto;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+
+    z-index: 12;
+}
+
+.nav {
     background-color: #15080e;
-    border-radius: 10px;
+    border-radius: 0px 0px 10px 10px;
 
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-
-    z-index: 12;
 }
 
 .nav div {

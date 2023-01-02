@@ -1,3 +1,6 @@
+import { ReactNode } from "react"
+import TableMaker from "../components/utils/tableMaker";
+
 export interface IWishlistItem {
     id: number,
     name: string,
@@ -10,4 +13,13 @@ export interface IWishlistItem {
 
 export interface IWishListCollection {
     [Group: string]: IWishlistItem[]
+}
+
+export interface IArticleItem {
+    id: number,
+    name: string,
+    description: string,
+    link: string,
+    image?: string,
+    alt?: string,
 }

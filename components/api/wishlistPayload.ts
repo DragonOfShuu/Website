@@ -9,22 +9,6 @@ const payload: IWishListCollection = {
             link: "https://www.amazon.com/Retro-Bit-Legacy-Wired-USB-Controller/dp/B08ZFCRX72/ref=sr_1_22?crid=2QJZ8MDQA3SCQ&keywords=speedrun&qid=1671250357&sprefix=speedrun%2Caps%2C126&sr=8-22",
             image: "/wishlistImages/SNESRIPOFFCONTROLLER.webp",
             tags: ["controller", "gaming"]
-        },
-        {
-            name: "JARLINK Electric Pencil Sharpener",
-            description: "A pencil sharpener that can support multiple types of pencils; this would be useful because I currently have to share my brother's sharpener.",
-            id: 1,
-            link: "https://www.amazon.com/JARLINK-Electric-Sharpener-Heavy-duty-Classroom/dp/B078DZY9Z5/",
-            image: "/wishlistImages/JarlinkPencilSharpener.webp",
-            tags: ["pencil", "sharpener"]
-        },
-        {
-            name: "X-ACTO Pencil Sharpener",
-            description: "A quick pencil sharpener that would be useful because I currently have to share my brother's sharpener.",
-            id: 2,
-            link: "https://www.amazon.com/X-ACTO-Pencil-Sharpener-Electric-SafeStart/dp/B086PMM18D/",
-            image: "/wishlistImages/x-actoPencilSharpener.webp",
-            tags: ["pencil", "sharpener"]
         }
     ],
     "Under $50": [

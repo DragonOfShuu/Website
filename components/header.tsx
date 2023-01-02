@@ -6,23 +6,29 @@ export default function Header() {
     return (
         <div>
             <Head>
-                <title>Logan Cederlof</title>
+                <title>Dragon of Shuu - Logan C.</title>
                 <meta name="description" content="A website on Logan Cederlof" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <nav className={styles.nav}>
-                <div>
-                    <Link href="/">Home</Link>
-                </div>
+            <div className={styles.headerNav}>
+                <nav className={styles.nav}>
+                    <div>
+                        <Link href="/">Home</Link>
+                    </div>
 
-                <div>
-                    <Link href="/about-me">About Me</Link>
-                </div>
+                    <div>
+                        <Link href="/about-me">About Me</Link>
+                    </div>
 
-                <div>
-                    <Link href="/wishlist">Wishlist</Link>
-                </div>
-            </nav>
+                    <div>
+                        <Link href="/wishlist">Wishlist</Link>
+                    </div>
+
+                    <div>
+                        <Link href="/e-portfolio">E-Portfolio</Link>
+                    </div>
+                </nav>
+            </div>
         </div>
     );
 }
