@@ -6,7 +6,7 @@ export default function Header() {
     return (
         <div>
             <Head>
-                <title>Dragon of Shuu</title>
+                <title>Dragon of Shuu - Logan C.</title>
                 <meta name="description" content="A website on my projects, my background, and ideas." />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
