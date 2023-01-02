@@ -104,7 +104,7 @@ export default function CreditCardDebt({}: Props) {
         </ContentBlog>
                 
         <ParagraphBlog>
-            Using this equation, we flip it around to give us the months we'd take with different 
+            Using this equation, we flip it around to give us the months we&apos;d take with different 
             payment counts. 
         </ParagraphBlog>
 
@@ -125,8 +125,8 @@ export default function CreditCardDebt({}: Props) {
         </ParagraphBlog>
 
         <ParagraphBlog>
-            As you can expect, as we pay more a month, we won't be paying off this debt for as long, and 
-            we won't be paying as much for interest.
+            As you can expect, as we pay more a month, we won&apos;t be paying off this debt for as long, and 
+            we won&apos;t be paying as much for interest.
         </ParagraphBlog>
 
         <ParagraphBlog>
@@ -188,7 +188,7 @@ export default function CreditCardDebt({}: Props) {
 
         <ParagraphBlog>
             Generally, the best thing you can do if possible is to pay more monthly; this will allow 
-            you to avoid less interest charges, and it will eliminate the debt faster so you won't 
+            you to avoid less interest charges, and it will eliminate the debt faster so you won&apos;t 
             have to worry about it anymore.
         </ParagraphBlog>
 
@@ -201,11 +201,11 @@ export default function CreditCardDebt({}: Props) {
         <ParagraphBlog>
             And if you do pay too little, but enough to outweight the interest, the debt will still 
             sit for long periods of time, which will cause you to be paying mostly interest money. 
-            This would be terrible because that is money you don't need to waste.
+            This would be terrible because that is money you don&apos;t need to waste.
         </ParagraphBlog>
 
         <ParagraphBlog>
-            If you can't pay for the best method, at least pay some amount; a little bit is going 
+            If you can&apos;t pay for the best method, at least pay some amount; a little bit is going 
             to be better than nothing. If you pay nothing, the debt will only increase further 
             faster.
         </ParagraphBlog>
