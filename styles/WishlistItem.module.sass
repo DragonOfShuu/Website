@@ -1,0 +1,80 @@
+@use 'colors'
+    
+.card 
+    display: grid
+    /* grid-template-columns: 60% 40% */
+    grid-template-rows: 60% 40% 
+
+    border-radius: 10px
+    padding: 0
+    background-color: colors.$background-color-lighter
+
+    border-color: colors.$accent-color
+    border-width: 1px
+    border-style: solid
+
+    box-shadow: 0px 0px 10px opacify(colors.$accent-color, 0.10)
+
+    min-height: 250px
+    min-width: 400px
+    max-width: 400px
+
+    overflow: hidden
+
+
+.containerImage 
+    display: flex
+
+    background-color: black
+    overflow: hidden
+
+    align-items: center
+    align-content: stretch
+
+    grid-row: 1
+
+    cursor: pointer
+
+
+.image 
+    width: 100%
+    height: auto
+
+
+.descriptionBox 
+    display: flex
+    flex-direction: column
+    padding: 10px 20px
+    grid-row: 2
+
+
+.header 
+    margin: 0
+
+
+.description 
+    text-align: left
+    align-self: flex-start
+
+
+.descScroll 
+    height: 100%
+    overflow-y: scroll
+    overflow-x: hidden
+
+
+    &::-webkit-scrollbar 
+        position: static
+        width: 10px
+
+    &::-webkit-scrollbar-thumb 
+        background-color: #00000000
+        border-radius: 5px
+
+
+    &:hover::-webkit-scrollbar-thumb 
+        background-color: darken(opacify(#91171F, 0.55), 0.20)
+
+
+    &::-webkit-scrollbar-thumb:hover 
+        background-color: opacify(colors.$accent-color, 0.50)

@@ -1,5 +1,5 @@
 import { IWishlistItem } from "../types";
-import styles from "../styles/WishlistItem.module.css"
+import styles from "../styles/WishlistItem.module.sass"
 import Image from "next/image";
 
 type Props = {

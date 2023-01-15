@@ -1,4 +1,4 @@
-import styles from "../styles/ItemScroll.module.css"
+import styles from "../styles/ItemScroll.module.sass"
 
 type Props = {
     children: JSX.Element[] | JSX.Element,

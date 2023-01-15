@@ -1,5 +1,5 @@
 import React, { Component, ReactNode } from 'react'
-import styles from "../../styles/e-portfolio/components/Bloggables.module.scss";
+import styles from "../../styles/e-portfolio/components/Bloggables.module.sass";
 
 type Props = {
     children: ReactNode

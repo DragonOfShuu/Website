@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 import HeaderBlog from './headerBlog'
 import ParagraphBlog from './paragraphBlog'
 
-import styles from "../../styles/e-portfolio/components/Bloggables.module.scss";
+import styles from "../../styles/e-portfolio/components/Bloggables.module.sass";
 
 type Props = {
     // children: ReactElement<HeaderBlog | ParagraphBlog> | 

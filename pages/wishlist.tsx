@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ItemScroll from "../components/itemScroll";
 import WishlistItem from "../components/wishlistItem";
-import styles from '../styles/Wishlist.module.css';
+import styles from '../styles/Wishlist.module.sass';
 import { IWishListCollection, IWishlistItem } from "../types";
 
 export default function Wishlist() {

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import styles from '../../../styles/projects/Runes.module.css';
+import styles from '../../../styles/projects/Runes.module.sass';
 import { convertToRune, convertFromRune } from '../../../components/projects/runes/runetables';
 import copyText from '../../../components/utils/copyToClipboard';
 
