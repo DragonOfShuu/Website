@@ -1,68 +1,111 @@
 @use 'colors'
-    
-.container 
-    padding: 0 2rem
 
-.title a:hover,
-.title a:focus,
-.title a:active 
-    text-decoration: underline
+.hr
+    width: 40px
+    margin-bottom: 40px
 
+.photo_text_display
+    display: grid
+    grid-template-columns: auto auto
+    column-gap: 20px
+    width: 800px
 
-.code 
-    background: #111
-    border-radius: 5px
-    padding: 0.75rem
-    font-size: 1.1rem
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace
-
-
-.grid 
+.picture_container
     display: flex
-    align-items: center
-    justify-content: center
-    flex-wrap: wrap
-    max-width: 800px
+
+    grid-column: 1
+    background-color: colors.$accent-color-darker
+    border-radius: 20px
+    overflow: hidden
+    border: 2px solid colors.$accent-color-lighter
+
+.picture
+    width: auto
+    height: auto
 
 
-.card 
-    margin: 1rem
-    padding: 1.5rem
+.vertical 
+    // border-left: 6px solid 
+    background-color: colors.$accent-color
+    // border: 1px solid
+    height: 200px
+    width: 3px
+    border-radius: 3px
+
+.text_block
+    font-family: "Trebuchet MS"
+    grid-column: 3
     text-align: left
-    color: inherit
-    text-decoration: none
-    border: 1px solid #222
-    border-radius: 10px
-    transition: color 0.15s ease, border-color 0.15s ease
-    max-width: 300px
+    font-size: 1.3em
+
+    span 
+        color: colors.$accent-color
+
+    
+
+// .container 
+//     padding: 0 2rem
+
+// .title a:hover,
+// .title a:focus,
+// .title a:active 
+//     text-decoration: underline
 
 
-    &:hover, &:focus, &:active 
-        color: colors.$minor-color-purple
-        border-color: colors.$minor-color-purple
+// .code 
+//     background: #111
+//     border-radius: 5px
+//     padding: 0.75rem
+//     font-size: 1.1rem
+//     font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+//     Bitstream Vera Sans Mono, Courier New, monospace
 
 
-    h2 
-        margin: 0 0 1rem 0
-        font-size: 1.5rem
+// .grid 
+//     display: flex
+//     align-items: center
+//     justify-content: center
+//     flex-wrap: wrap
+//     max-width: 800px
 
 
-    p 
-        margin: 0
-        font-size: 1.25rem
-        line-height: 1.5
+// .card 
+//     margin: 1rem
+//     padding: 1.5rem
+//     text-align: left
+//     color: inherit
+//     text-decoration: none
+//     border: 1px solid #222
+//     border-radius: 10px
+//     transition: color 0.15s ease, border-color 0.15s ease
+//     max-width: 300px
 
 
-.logo 
-    height: 1em
-    margin-left: 0.5rem
-
-    img 
-        filter: invert(1)
+//     &:hover, &:focus, &:active 
+//         color: colors.$minor-color-purple
+//         border-color: colors.$minor-color-purple
 
 
-@media (max-width: 600px) 
-    .grid 
-        width: 100%
-        flex-direction: column
+//     h2 
+//         margin: 0 0 1rem 0
+//         font-size: 1.5rem
+
+
+//     p 
+//         margin: 0
+//         font-size: 1.25rem
+//         line-height: 1.5
+
+
+// .logo 
+//     height: 1em
+//     margin-left: 0.5rem
+
+//     img 
+//         filter: invert(1)
+
+
+// @media (max-width: 600px) 
+//     .grid 
+//         width: 100%
+//         flex-direction: column

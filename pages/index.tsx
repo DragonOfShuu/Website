@@ -1,6 +1,21 @@
 import styles from '../styles/Home.module.sass'
+import Image from "next/image";
 
 export default function Home() {
+  let summary: string[] = [
+    `Hello! My name is Logan Cederlof; a talented, and 
+    hardworking developer! `, `I love to spend my free
+    time programming new projects, and learning new 
+    frameworks! I mainly prefer to program in Python,
+    however my abilities extend farther than that; I
+    also enjoy C#, Java, and Javascript.`, `I have 
+    two years of work experience working on using
+    the Elastic Stack framework as a solution to 
+    storing 4G/5G cellular router metric data.`,
+    `On top of this, I have a vast array of personal
+    projects that I have worked on in my free time!`
+  ]
+
   return (
     <div className={styles.container}>
       <main className="main">
@@ -8,44 +23,25 @@ export default function Home() {
           Welcome to my <span>WEBSITE!</span>
         </h1>
         
-        <p>Not programmed yet :/</p>
+        <hr className={styles.hr} />
 
-        {/* <p className="description">
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div> */}
+        <div className={styles.photo_text_display}>
+            <div className={styles.picture_container}>
+              <Image src="/about-me/LoganC.png" 
+                    width={9*20} 
+                    height={16*20} 
+                    alt="Logan C's Portrait"
+                    className={styles.picture}/>
+            </div>
+            <div className={styles.vertical}></div>
+            <div className={styles.text_block}>
+                {
+                  summary.map((e, index) => {
+                    return <p key={index}>{e}</p>;
+                  })
+                }
+            </div>
+        </div>
       </main>
     </div>
   )

@@ -22,4 +22,13 @@ export interface IArticleItem {
     link: string,
     image?: string,
     alt?: string,
+    tags?: ETag[],
+    date?: Date
+}
+
+export enum ETag {
+    article = 'article',
+    project = 'project',
+    translation = 'translation',
+    SLCC = 'SLCC'
 }

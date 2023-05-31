@@ -6,7 +6,6 @@ import HeaderBlog from '../../../components/bloggables/headerBlog'
 import ParagraphBlog from '../../../components/bloggables/paragraphBlog'
 import ContentBlog from '../../../components/bloggables/contentBlog'
 import TableMaker from '../../../components/utils/tableMaker'
-// import { MathComponent } from 'mathjax-react'
 
 type Props = {}
 
@@ -40,12 +39,6 @@ export default function CreditCardDebt({}: Props) {
         <ParagraphBlog>
             First, we must calculate the monthly, compound interest. This is calculated using:
         </ParagraphBlog>
-
-        {/* <ParagraphBlog>
-            <code>
-                i = APR/12
-            </code>
-        </ParagraphBlog> */}
 
         <ContentBlog stretchInner={true}>
             <Math>
