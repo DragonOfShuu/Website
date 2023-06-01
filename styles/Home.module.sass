@@ -10,8 +10,15 @@
     column-gap: 20px
     width: 800px
 
-.picture_container
+.section_center
     display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 100%
+
+.picture_container
+    display: block
 
     grid-column: 1
     background-color: colors.$accent-color-darker
@@ -20,8 +27,11 @@
     border: 2px solid colors.$accent-color-lighter
 
 .picture
-    width: auto
-    height: auto
+    // width: auto
+    // height: auto
+    width: 100%
+    height: 100%
+    object-fit: cover
 
 
 .vertical 
@@ -41,71 +51,31 @@
     span 
         color: colors.$accent-color
 
+@media only screen and (max-width: 830px) 
+    .photo_text_display
+        row-gap: 20px
+        column-gap: 0px
+        width: 75vw
+
+    .picture_container
+        grid-row: 1
+        width: 50vw
+        text-align: center
+        // align-self: center
+
+    .section_center
+        grid-column: 1
+
+    // .picture
+    //     display: block
+    //     max-width: 10%
+
+    .vertical 
+        height: 3px
+        width: 200px
+        grid-column: 1
+        grid-row: 2
     
-
-// .container 
-//     padding: 0 2rem
-
-// .title a:hover,
-// .title a:focus,
-// .title a:active 
-//     text-decoration: underline
-
-
-// .code 
-//     background: #111
-//     border-radius: 5px
-//     padding: 0.75rem
-//     font-size: 1.1rem
-//     font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-//     Bitstream Vera Sans Mono, Courier New, monospace
-
-
-// .grid 
-//     display: flex
-//     align-items: center
-//     justify-content: center
-//     flex-wrap: wrap
-//     max-width: 800px
-
-
-// .card 
-//     margin: 1rem
-//     padding: 1.5rem
-//     text-align: left
-//     color: inherit
-//     text-decoration: none
-//     border: 1px solid #222
-//     border-radius: 10px
-//     transition: color 0.15s ease, border-color 0.15s ease
-//     max-width: 300px
-
-
-//     &:hover, &:focus, &:active 
-//         color: colors.$minor-color-purple
-//         border-color: colors.$minor-color-purple
-
-
-//     h2 
-//         margin: 0 0 1rem 0
-//         font-size: 1.5rem
-
-
-//     p 
-//         margin: 0
-//         font-size: 1.25rem
-//         line-height: 1.5
-
-
-// .logo 
-//     height: 1em
-//     margin-left: 0.5rem
-
-//     img 
-//         filter: invert(1)
-
-
-// @media (max-width: 600px) 
-//     .grid 
-//         width: 100%
-//         flex-direction: column
+    .text_block
+        grid-column: 1
+        grid-row: 3

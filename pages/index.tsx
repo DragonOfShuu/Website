@@ -26,6 +26,7 @@ export default function Home() {
         <hr className={styles.hr} />
 
         <div className={styles.photo_text_display}>
+          <div className={styles.section_center}>
             <div className={styles.picture_container}>
               <Image src="/about-me/LoganC.png" 
                     width={9*20} 
@@ -33,14 +34,17 @@ export default function Home() {
                     alt="Logan C's Portrait"
                     className={styles.picture}/>
             </div>
+          </div>
+          <div className={styles.section_center}>
             <div className={styles.vertical}></div>
-            <div className={styles.text_block}>
-                {
-                  summary.map((e, index) => {
-                    return <p key={index}>{e}</p>;
-                  })
-                }
-            </div>
+          </div>
+          <div className={styles.text_block}>
+              {
+                summary.map((e, index) => {
+                  return <p key={index}>{e}</p>;
+                })
+              }
+          </div>
         </div>
       </main>
     </div>
