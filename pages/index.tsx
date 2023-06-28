@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Home() {
   let summary: string[] = [
-    `Hello! My name is Logan Cederlof; a talented, and 
+    `Hello! My name is Logan Cederlof (Dragon of Shuu); a talented, and 
     hardworking developer! `, `I love to spend my free
     time programming new projects, and learning new 
     frameworks! I mainly prefer to program in Python,

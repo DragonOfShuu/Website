@@ -12,7 +12,7 @@ export default function FourOhFour({}: Props) {
         </h1>
 
         <h2>
-            That&apos;s a 404!
+          { "That's a 404!" }
         </h2>
 
         <Link href={"/"} className={styles.theLink}>
