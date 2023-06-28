@@ -17,7 +17,7 @@ export default function Header() {
 
                     {/* <Link href="/about-me">About Me</Link> */}
 
-                    <Link href="/wishlist">Wishlist</Link>
+                    {/* <Link href="/wishlist">Wishlist</Link> */}
 
                     <Link href="/e-portfolio">E-Portfolio</Link>
                 </nav>
